@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
-import 'screens/splash_screen.dart';
+import 'splash_screen.dart';
 
 void main() {
-  runApp(const TextScannerApp());
+  runApp(const DocScanApp());
 }
 
-class TextScannerApp extends StatelessWidget {
-  const TextScannerApp({super.key});
+class DocScanApp extends StatelessWidget {
+  const DocScanApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'DocScan',
       debugShowCheckedModeBanner: false,
-      title: 'Document Scanner App',
-
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-
       home: const SplashScreen(),
     );
   }
