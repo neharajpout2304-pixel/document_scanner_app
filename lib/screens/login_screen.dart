@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               const SizedBox(height: 8),
-              GradientButton(text: 'log in', onTap: _login),
+              GradientButton(text: 'Login', onTap: _login),
               const SizedBox(height: 22),
               const Center(
                 child: Text('or continue with',
