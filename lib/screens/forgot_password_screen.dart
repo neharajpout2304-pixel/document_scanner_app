@@ -50,7 +50,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                   child: Icon(
                     _sent ? Icons.mark_email_read_outlined : Icons.lock_reset,
-                    size: 46,
+                    size: 52,
                     color: AppColors.pink,
                   ),
                 ),
