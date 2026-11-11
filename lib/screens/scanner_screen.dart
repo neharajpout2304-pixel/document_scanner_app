@@ -87,7 +87,7 @@ class _ScannerScreenState extends State<ScannerScreen> {
                   border: Border.all(color: AppColors.pink, width: 2),
                 ),
                 child: const Center(
-                  child: Text('camera preview here',
+                  child: Text('camera preview area',
                       style: TextStyle(color: Colors.white24)),
                 ),
               ),
