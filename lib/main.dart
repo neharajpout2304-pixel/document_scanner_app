@@ -14,10 +14,6 @@ class TextScannerApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Text Scanner App',
 
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-
       home: const SplashScreen(),
     );
   }
