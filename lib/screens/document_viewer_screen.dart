@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_theme.dart';
 
-// Screen 14: Document viewer
-// Pages swipe karke dekho, rename / move / tag / delete karo.
 class DocumentViewerScreen extends StatefulWidget {
   final ScannedDoc doc;
   const DocumentViewerScreen({super.key, required this.doc});
@@ -23,7 +21,6 @@ class _DocumentViewerScreenState extends State<DocumentViewerScreen> {
     super.dispose();
   }
 
-  // Naam badalna (.pdf khud lag jata hai)
   Future<void> _rename() async {
     final base = doc.name.endsWith('.pdf')
         ? doc.name.substring(0, doc.name.length - 4)
@@ -33,7 +30,6 @@ class _DocumentViewerScreenState extends State<DocumentViewerScreen> {
     setState(() => doc.name = '$newName.pdf');
   }
 
-  // Dusre folder me bhejna
   Future<void> _move() async {
     final folder = await showDialog<String>(
       context: context,
@@ -58,7 +54,6 @@ class _DocumentViewerScreenState extends State<DocumentViewerScreen> {
     showMsg(context, 'Moved to $folder');
   }
 
-  // Tags lagana / hatana (checkbox list)
   Future<void> _editTags() async {
     await showDialog(
       context: context,
@@ -102,7 +97,6 @@ class _DocumentViewerScreenState extends State<DocumentViewerScreen> {
     setState(() {});
   }
 
-  // Delete = trash me bhejna (settings > trash se wapas aa sakta hai)
   Future<void> _delete() async {
     final ok = await confirmDialog(
         context, 'delete document', 'Move "${doc.name}" to trash?',
@@ -113,7 +107,6 @@ class _DocumentViewerScreenState extends State<DocumentViewerScreen> {
     Navigator.pop(context);
   }
 
-  // Ek page ka dummy "kagaz"
   Widget _paper(int index) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 12),
